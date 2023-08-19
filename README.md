@@ -19,7 +19,7 @@ This poses a problem, because sometimes APIs DO return a sequence of `\r\n\t` an
 ### Expected behavior
 This will work as expected:
 ```javascript
-let response = await fetch("https://lutterjs-test.nightskystudio.workers.dev/normal")
+let response = await fetch("https://flutterjs-test.nightskystudio.workers.dev/normal")
 let json = await response.json()
 ```
 `json` will be an object with parsed JSON object from the response. Since return in `/normal` path does not contain any special characters.
