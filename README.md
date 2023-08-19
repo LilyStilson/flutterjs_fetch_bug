@@ -9,7 +9,7 @@ I made this repository and a Cloudflare worker to demonstrate the bug.
 ### Faulty behavior
 After I do this
 ```javascript
-let response = await fetch("https://https://flutterjs-test.nightskystudio.workers.dev/faulty")
+let response = await fetch("https://flutterjs-test.nightskystudio.workers.dev/faulty")
 let json = await response.json()
 ```
 I expect `json` to be an object with parsed JSON object from the response. But instead, I get a string with the response body. This shows that something went wrong when parsing the response.
@@ -19,7 +19,7 @@ This poses a problem, because sometimes APIs DO return a sequence of `\r\n\t` an
 ### Expected behavior
 This will work as expected:
 ```javascript
-let response = await fetch("https://https://flutterjs-test.nightskystudio.workers.dev/normal")
+let response = await fetch("https://lutterjs-test.nightskystudio.workers.dev/normal")
 let json = await response.json()
 ```
 `json` will be an object with parsed JSON object from the response. Since return in `/normal` path does not contain any special characters.
